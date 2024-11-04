@@ -1,0 +1,94 @@
+<!-- me.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - LinkedIn Style</title>
+    <link rel="stylesheet" href="mestyles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">ChefUp</div>
+            <input type="text" placeholder="Search">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">My Network</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="#">Messaging</a>
+                <a href="#">Notifications</a>
+                <a href="me.html">Me</a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="feed">
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <img src="profile-pic.png" alt="Profile Picture" class="profile-pic">
+                <div class="profile-info">
+                    <h1>Tyler Lontok</h1>
+                    <p>Founder at ChefUp | Toronto, Ontario</p>
+                </div>
+            </div>
+            
+            <!-- Profile Sections -->
+            <div class="profile-sections">
+                <!-- About Section -->
+                <section class="about">
+                    <h2>About</h2>
+                    <p>Experienced entrepreneur with a background in culinary arts and business. Passionate about connecting people through food and innovative culinary experiences.</p>
+                </section>
+
+                <!-- Experience Section -->
+                <section class="experience">
+                    <h2>Experience</h2>
+                    <div class="experience-item">
+                        <h3>Founder</h3>
+                        <p>ChefUp</p>
+                        <span>2023 - Present | Calgary, Alberta</span>
+                        <p>Building a platform that revolutionizes culinary experiences by connecting food enthusiasts with professional chefs.</p>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="education">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <h3>Toronto Metropolitan University</h3>
+                        <span>Bachelor of Commerce | 2019-2024</span>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li onclick="toggleSkill(this)">+ Fine Dining</li>
+                        <li onclick="toggleSkill(this)">+ Italian</li>
+                        <li onclick="toggleSkill(this)">+ Japanese</li>
+                        <li onclick="toggleSkill(this)">+ Private Chef</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleSkill(skill) {
+            skill.classList.toggle('active');
+
+            // Delay adding/removing the "+" sign until after the transition
+            setTimeout(() => {
+                if (skill.classList.contains('active')) {
+                    skill.textContent = skill.textContent.replace('+ ', '');
+                } else {
+                    skill.textContent = '+ ' + skill.textContent;
+                }
+            }, 500); // Match this delay to the transition duration in CSS
+        }
+    </script>
+</body>
+</html>

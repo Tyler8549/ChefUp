@@ -1,0 +1,182 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f2ef;
+}
+
+/* Header Styles */
+header {
+    background-color: #96DCFF;
+    padding: 10px 0;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 1s ease;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* Search Box Styles */
+.navbar input {
+    width: 300px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: width 0.3s ease;
+}
+
+.navbar input:focus {
+    width: 350px;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevents wrapping onto a new line */
+    max-width: 1100px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 20%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Feed Styles */
+.feed {
+    width: 65%; /* Reduce width slightly to fit container */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Sample Post Styles */
+.post {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Right Sidebar Styles */
+.right-sidebar {
+    width: 25%; /* Adjusted width to fit flex container */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Job Posting Styles */
+.job-posting {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-posting h2 {
+    margin-bottom: 10px;
+}
+
+.job-posting p {
+    margin-bottom: 8px;
+}
+
+.job-posting button {
+    background-color: #0073b1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-posting button:hover {
+    background-color: #005582;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .feed, .right-sidebar, .sidebar {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Profile Button Styles */
+.profile-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1.1vw;
+    color: white;
+    background-color: #96DCFF; /* Initial button background color */
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.5s ease, color 1s ease;
+}
+
+/* Hover State */
+.profile-button:hover {
+    background-color: #45BCF7; /* Background color on hover */
+    color: black;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Active (Click) State */
+.profile-button:active {
+    background-color: #45A4D1; /* Slightly darker blue on click */
+    color: white;
+}
+
